@@ -40,6 +40,7 @@ namespace VaR
             this.portfolioDataSet = new VaR.PortfolioDataSet();
             this.tickTableAdapter = new VaR.PortfolioDataSetTableAdapters.TickTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tickBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioDataSet)).BeginInit();
@@ -57,7 +58,7 @@ namespace VaR
             this.priceDataGridViewTextBoxColumn,
             this.volumeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tickBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 14);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(769, 194);
             this.dataGridView1.TabIndex = 0;
@@ -110,16 +111,27 @@ namespace VaR
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 220);
+            this.dataGridView2.Location = new System.Drawing.Point(20, 214);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(768, 217);
+            this.dataGridView2.Size = new System.Drawing.Size(768, 127);
             this.dataGridView2.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 50);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -144,6 +156,7 @@ namespace VaR
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
