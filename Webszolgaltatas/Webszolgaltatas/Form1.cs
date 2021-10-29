@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using Webszolgaltatas.Entities;
 using Webszolgaltatas.MnbServiceReference;
 
 namespace Webszolgaltatas
@@ -31,6 +33,11 @@ namespace Webszolgaltatas
             };
             var response = mnbService.GetExchangeRates(request);
             var result = response.GetExchangeRatesResult;
+
+            var xml = new XmlDocument();
+            xml.LoadXml(result);
         }
+
+        BindingList<RateData> Rates = new BindingList<RateData>();
     }
 }
